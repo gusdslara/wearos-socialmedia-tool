@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Fundo Arredondado Instagram -->
+    <path
+        android:fillColor="#E1306C"
+        android:pathData="M15,4 L33,4 C39.07,4 44,8.93 44,15 L44,33 C44,39.07 39.07,44 33,44 L15,44 C8.93,44 4,39.07 4,33 L4,15 C4,8.93 8.93,4 15,4 Z" />
+
+    <!-- Contorno Câmera Branco -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M16,11 L32,11 C34.76,11 37,13.24 37,16 L37,32 C37,34.76 34.76,37 32,37 L16,37 C13.24,37 11,34.76 11,32 L11,16 C11,13.24 13.24,11 16,11 Z" />
+
+    <!-- Lente Central Branca -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M24,17.5 A6.5,6.5 0 1,0 24,30.5 A6.5,6.5 0 1,0 24,17.5 Z" />
+
+    <!-- Ponto do Flash Branco -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32.5,14 A1.7,1.7 0 1,0 32.5,17.4 A1.7,1.7 0 1,0 32.5,14 Z" />
+</vector>

@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Fundo circular com gradiente moderno escuro/índigo -->
+    <path
+        android:pathData="M48,0A48,48 0 1,0 48,96A48,48 0 1,0 48,0Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="6"
+                android:endX="84"
+                android:endY="90"
+                android:type="linear">
+                <item android:color="#1A1C29" android:offset="0.0" />
+                <item android:color="#0B0D13" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Borda sutil / glow anel circular externo com gradiente vibrante -->
+    <path
+        android:pathData="M48,2A46,46 0 1,0 48,94A46,46 0 1,0 48,2Z"
+        android:strokeWidth="1.75">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="15"
+                android:startY="10"
+                android:endX="85"
+                android:endY="85"
+                android:type="linear">
+                <item android:color="#818CF8" android:offset="0.0" />
+                <item android:color="#E1306C" android:offset="0.5" />
+                <item android:color="#3B82F6" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Balão de conversa principal (Chat / Mensagem / Social) -->
+    <!-- Base com gradiente vibrante estilo Stories/Instagram + Facebook/Twitter -->
+    <path
+        android:pathData="M31,23 L65,23 C73.84,23 81,30.16 81,39 C81,47.84 73.84,55 65,55 L45,55 L32,66 L34,55 C26.27,55 20,47.84 20,39 C20,30.16 26.27,23 31,23 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="20"
+                android:startY="23"
+                android:endX="81"
+                android:endY="66"
+                android:type="linear">
+                <item android:color="#38BDF8" android:offset="0.0" />
+                <item android:color="#6366F1" android:offset="0.5" />
+                <item android:color="#D946EF" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Segundo balão sobreposto / compartilhado conectado (Interação social e comunidade) -->
+    <path
+        android:pathData="M66,45 C73.7,46.2 79,51.8 79,59 C79,64.2 75.8,68.6 71,70.8 L73,78 L63,72.4 L56,72.4 C48.5,72.4 42.4,67.6 41.2,61 C43.8,62 46.8,62.5 50,62.5 C60.5,62.5 69.5,55.2 70.8,45 Z"
+        android:fillColor="#E0E7FF"
+        android:fillAlpha="0.32" />
+
+    <!-- 3 Pontos de digitação/conversa no balão principal (Dots) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,39A4,4 0 1,0 37,39.01Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50.5,39A4,4 0 1,0 50.5,39.01Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M64,39A4,4 0 1,0 64,39.01Z" />
+
+</vector>

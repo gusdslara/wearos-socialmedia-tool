@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- Tela 1: Grade de Redes Sociais com 3 linhas (Facebook/Instagram, LinkedIn/Reddit, YouTube/YouTube Music) -->
+    <ScrollView
+        android:id="@+id/scroll_social"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:paddingTop="28dp"
+        android:paddingBottom="38dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/panel_social_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Linha 1: Facebook & Instagram -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Facebook -->
+                <FrameLayout
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_facebook"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <!-- Instagram -->
+                <FrameLayout
+                    android:id="@+id/btn_instagram"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_instagram"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Linha 2: LinkedIn & Reddit -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- LinkedIn -->
+                <FrameLayout
+                    android:id="@+id/btn_linkedin"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_linkedin"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <!-- Reddit -->
+                <FrameLayout
+                    android:id="@+id/btn_reddit"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_reddit"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Linha 3: YouTube & YouTube Music -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- YouTube -->
+                <FrameLayout
+                    android:id="@+id/btn_youtube"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_youtube"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <!-- YouTube Music -->
+                <FrameLayout
+                    android:id="@+id/btn_youtube_music"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:background="@drawable/bg_social_tile_selector"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_youtube_music"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Tela 2: Navegador GeckoView com Container Quadrado (Square) ou Fullscreen -->
+    <FrameLayout
+        android:id="@+id/browser_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <!-- Área onde o GeckoView fica posicionado (centralizado) -->
+        <FrameLayout
+            android:id="@+id/gecko_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#000000">
+
+            <org.mozilla.geckoview.GeckoView
+                android:id="@+id/geckoview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <!-- Barra de progresso de carregamento sutil -->
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:max="100"
+            android:visibility="gone" />
+
+        <!-- Painel Inferior Completo (Bottom Sheet Dock): Invocado ao arrastar de baixo para cima -->
+        <LinearLayout
+            android:id="@+id/bottom_controls_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_bottom_sheet"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:visibility="gone">
+
+            <!-- Pílula/Handle Superior Indicadora de Bottom Sheet -->
+            <View
+                android:layout_width="28dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_sheet_handle" />
+
+            <!-- Linha de Botões dentro da área de fundo uniforme -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Botão Minimalista "‹ Redes" (Fundo Transparente dentro do Dock) -->
+                <FrameLayout
+                    android:id="@+id/btn_back_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <TextView
+                        android:id="@+id/txt_back_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="‹ Redes"
+                        android:textColor="#F1F5F9"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <!-- Divisor Vertical Sutil -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#475569" />
+
+                <!-- Botão Minimalista Quadrado/Redondo ("◯" / "▢") (Fundo Transparente) -->
+                <FrameLayout
+                    android:id="@+id/btn_toggle_aspect"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/txt_aspect_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="◯"
+                        android:textColor="#38BDF8"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

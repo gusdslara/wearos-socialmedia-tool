@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Círculo externo Vermelho YouTube Music -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M24,4C12.95,4 4,12.95 4,24c0,11.05 8.95,20 20,20s20,-8.95 20,-20C44,12.95 35.05,4 24,4z" />
+    <!-- Círculo concêntrico escuro -->
+    <path
+        android:fillColor="#1F1F1F"
+        android:pathData="M24,11C16.82,11 11,16.82 11,24c0,7.18 5.82,13 13,13s13,-5.82 13,-13C37,16.82 31.18,11 24,11z" />
+    <!-- Triângulo Play Branco -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,17v14l11,-7z" />
+</vector>
